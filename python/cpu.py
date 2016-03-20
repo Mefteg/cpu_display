@@ -34,7 +34,6 @@ def connection(preferences):
     while not ser.is_open:
         try:
             ser.open()
-            print "Connection opened."
         except (ValueError, serial.SerialException) as error:
             time.sleep(1)
 
@@ -74,7 +73,6 @@ while True:
     	data = ser.readline()
     except (ValueError, serial.SerialException, serial.SerialTimeoutException, AttributeError) as error:
         ser.close()
-        print "Connection error."
         # wait for a reconnection
         ser = connection(preferences)
 
