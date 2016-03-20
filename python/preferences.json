@@ -1,0 +1,4 @@
+{
+    "port": "/dev/tty.wchusbserial1410",
+    "baudrate": 9600
+}
